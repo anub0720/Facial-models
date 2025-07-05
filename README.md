@@ -30,6 +30,36 @@ Raw data : https://www.kaggle.com/datasets/anubhabbhattacharya7/comsys/data
 For any queries, please contact : 
 Soham Mandal (sohammandal8122005@gmail.com)
 
+Task A : 
+
+# Architecture Overview
+
+The model's design can be broken down into the following key components:
+
+---
+
+## 1. Dual Feature Extractors (EfficientNetB3)
+
+The system begins by processing input images through two parallel and independent **EfficientNetB3** backbone networks:
+
+- **`self.feature_extractor_original`**:  
+  Dedicated to extracting features from the original, raw images. This allows the network to capture general appearance and contextual information.
+
+- **`self.feature_extractor_processed`**:  
+  Dedicated to extracting features from the preprocessed images (e.g., face-aligned, cropped). This enables the network to specialize in learning fine-grained facial details.
+
+Both **EfficientNetB3** instances are initialized with **pre-trained weights from ImageNet** (`pretrained=True`) and have their final classification heads removed (`num_classes=0`). Each backbone outputs a **1536-dimensional feature vector**.
+
+This **dual-stream approach** ensures that the model can effectively utilize information from both data representations.
+
+---
+
+## 2. Feature Fusion and Re-calibration (SE Block)
+
+After features are extracted from both streams, they are concatenated along the feature dimension:
+
+features_combined = torch.cat((features_original, features_processed), dim=1)
+
 
 Task B : 
 
