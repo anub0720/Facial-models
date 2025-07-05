@@ -30,7 +30,7 @@ Raw data : https://www.kaggle.com/datasets/anubhabbhattacharya7/comsys/data
 For any queries, please contact : 
 Soham Mandal (sohammandal8122005@gmail.com)
 
-Task A : 
+ # Task A : 
 
 # Architecture Overview
 
@@ -61,7 +61,7 @@ After features are extracted from both streams, they are concatenated along the 
 features_combined = torch.cat((features_original, features_processed), dim=1)
 
 
-Task B : 
+# Task B : 
 
 # Model Architecture
 
