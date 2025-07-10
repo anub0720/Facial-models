@@ -8,8 +8,6 @@ import subprocess
 # ---------------------------
 print("Enter the test folder path for Task A:")
 TEST_PATH_TASK_A = input().strip()
-print("Enter the test folder path for Task B:")
-TEST_PATH_TASK_B = input().strip()
 REQUIRED_PACKAGES = [
     ("torch", "torch"),
     ("torchvision", "torchvision"),
@@ -1150,5 +1148,7 @@ if __name__ == '__main__':
             print(f"An error occurred during model loading or testing: {e}")
         print("\nTask A inference complete!\n")
     print("Task B evaluation starts:\n")
+    print("Enter the test folder path for Task B:")
+    TEST_PATH_TASK_B = input().strip()
     run_task_b(TEST_PATH_TASK_B)
     print("\nTest pipeline execution complete!")
