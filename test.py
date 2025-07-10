@@ -1001,6 +1001,7 @@ def run_task_b(TEST_PATH_TASK_B):
                         tensor = transform(img).unsqueeze(0).to(device)
                         embeddings.append(model(tensor))
                     except:
+                        print(f"Error processing image {p}. Skipping.")
                         continue
                 if embeddings:
                     avg_reference_embeddings[class_name] = torch.mean(torch.cat(embeddings), dim=0)
