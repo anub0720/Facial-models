@@ -25,7 +25,7 @@ sudo apt-get install git-lfs
 git lfs install
 ```
 ## 📦 Folder Structure & Expected Input Format
-
+```
 Facial-models/
 │
 ├── test.py # Main pipeline entrypoint for Task A and Task B
@@ -39,12 +39,12 @@ Facial-models/
 │ └── Testing_Code.ipynb
 │ └── best_embedding_model_TaskB.pth # PyTorch model file for Task B
 └── README.md
-
+```
 
 ### 👤 Task A (Gender Classification)
 
 Expected test dataset format:
-
+```
 task-a/
 ├── male/
 │ ├── img1.jpg
@@ -52,6 +52,7 @@ task-a/
 └── female/
 ├── img3.jpg
 └── img4.jpg
+```
 
 Same as validation dataset format
 
@@ -60,6 +61,7 @@ Same as validation dataset format
 
 Expected test dataset format:
 
+```
 task-b/
 ├── 001_frontal/
 │ ├── 001_frontal.jpg # Reference image
@@ -72,6 +74,7 @@ task-b/
 │ ├── distorted1.jpg
 │ └── distorted2.jpg
 ...
+```
 
 Same as validation dataset format
 
