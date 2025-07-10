@@ -91,10 +91,7 @@ TEST_PREPROCESSED_OUTPUT_DIR = 'preprocessed_test_faces_output'
 # ---------------------------
 # Ask user to enter paths at runtime
 # ---------------------------
-print("Enter the test folder path for Task A:")
-TEST_PATH_TASK_A = input().strip()
-print("Enter the test folder path for Task B:")
-TEST_PATH_TASK_B = input().strip()
+
 from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningModule, Trainer
 import timm
