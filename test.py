@@ -55,6 +55,7 @@ import warnings
 import cv2
 import pytorch_lightning as pl
 from collections import Counter
+from sklearn.metrics import confusion_matrix
 
 # ---------------------------
 # Replace these with your actual checkpoint paths
