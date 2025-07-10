@@ -2,6 +2,7 @@
 
 This repository contains the unified inference pipeline (`test.py`) for both **Task A** (gender classification) and **Task B** (face identity matching) from the ComSys Hackathon.
 
+** Using GPU is recommended **
 ---
 
 ## 🔧 Setup Instructions
